@@ -1,0 +1,46 @@
+<div class="col-lg-12 services-bg" style="min-height: 400px; padding: 0">
+    <div class="container" style="padding: 20px;">
+        <div class="col-lg-8 col-lg-offset-2   contact-form-bg">
+            <table class="table" style="margin-top: 30px;">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each items}}
+                        <tr>
+                            <td>{{this.name}}</td>
+                            <td>{{this.price}}</td>
+                            <td>
+                                <a href="/admin/items/edit/{{this.id}}" class="">Edit</a>
+                                <a href="/admin/items/delete/{{this.id}}" class="">Delete</a>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <div class="container" style="padding: 20px;">
+                <div class="col-lg-12" style="align-items: center; display: flex; justify-content: center">
+                    <ul class="pagination pagination-sm">
+                        <li>
+                            <a class="btn btn-xs bg-default" style="margin: 10px;" href="/admin/items?page={{pagination.previous}}">
+                                <span class="glyphicon glyphicon-arrow-left"> </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a style="margin: 10px;" href="#">{{pagination.current}} / {{pagination.max}}</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-xs bg-default" style="margin: 10px;" href="/admin/items?page={{pagination.next}}">
+                                <span class="glyphicon glyphicon-arrow-right"> </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

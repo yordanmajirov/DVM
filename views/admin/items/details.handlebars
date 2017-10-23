@@ -1,0 +1,22 @@
+<div class="col-lg-12">
+    <div class="container">
+        <table class="table">
+            <caption>Items</caption>
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each items}}
+                    <tr>
+                        <td>{{this.name}}</td>
+                        <td>{{this.price}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="col-lg-12 services-bg" style="padding: 0;">
+    <div class="container" style="padding: 20px;">
+        <div class="col-lg-8 col-lg-offset-2 form-bg" style="margin-top:30px; margin-bottom: 30px;">
+            <table class="table">
+                <caption>Message details</caption>
+                <tbody>
+                    <tr>
+                        <td>From</td>
+                        <td>{{message.from}}</td>
+                    </tr>
+                    <tr>
+                        <td>Subject</td>
+                        <td>{{message.subject}}</td>
+                    </tr>
+                    <tr>
+                        <td>Text</td>
+                        <td>{{message.text}}</td>
+                    </tr>
+                    <tr>
+                        {{#unless message.replied}}
+                            <td>
+                                <form method="POST" action="/admin/messages/mark-read/{{message.id}}">
+                                    <button type="submit" class="btn btn-sm btn-success">Mark as read</button>
+                                </form>
+                            </td>
+                        {{else}}
+                            <td>
+                                <a href="/admin/messages/reply/{{message.id}}" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        {{/unless}}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

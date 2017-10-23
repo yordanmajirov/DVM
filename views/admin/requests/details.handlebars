@@ -1,0 +1,58 @@
+<div class="col-lg-12 services-bg" style="padding: 0;">
+    <div class="container" style="padding: 20px;">
+        <div class="col-lg-8 col-lg-offset-2 form-bg" style="margin-top:30px; margin-bottom: 30px;">
+            <table class="table">
+                <caption>Request details</caption>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>{{request.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>{{request.email}}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>{{request.phone}}</td>
+                    </tr>
+                    <tr>
+                        <td>From</td>
+                        <td>{{request.from}}</td>
+                    </tr>
+                    <tr>
+                        <td>To</td>
+                        <td>{{request.to}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td>{{request.date}}</td>
+                    </tr>
+                    <tr>
+                        <td>Items</td>
+                        <td>
+                            {{#each items}}
+                                {{this.name}}
+                            {{/each}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Message</td>
+                        <td>{{request.message}}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {{#unless request.replied}}
+                                <form method="POST" action="/admin/requests/mark-read/{{request.id}}">
+                                    <button type="submit" class="btn btn-sm btn-success">Mark as read</button>
+                                </form>
+                            {{else}}
+                                <a href="/admin/requests/reply/{{request.id}}" class="btn btn-sm btn-danger">Delete</a>
+                            {{/unless}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

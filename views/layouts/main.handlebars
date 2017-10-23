@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dvm Removals</title>
+<meta name="Description" content=" London based Removals company that operates UK wide as well as most EU countries. We rage between house, office, waste removals. Get your free no obligations quote today.">
+<meta name="Keywords" content="moving,london, removal, services, company, move, house, office, professional, ">
+  <meta charset="utf-8">
+  <meta property="og:image" content="/images/logo.png">
+  <meta property="og:title" content="DVM Removals">
+  <meta property="og:description" content="We are London and east end based removals company that operates UK wide as well as most EU member countries.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script> 
+  <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+  <link href="/css/site.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container" style="box-shadow: 0px 1px 1px #000000 inset">
+    <div class="col-lg-10 col-lg-offset-1" style="padding-top: 30px; padding-bottom: 20px;">
+      <nav class="navbar navbar-default no-margins nav-font">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-bar-collapse" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="/">
+              <img class="navbar-left" style="padding: auto; margin-top: 3px;" src="/images/logo.png"></img>
+            </a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="nav-bar-collapse">
+            <ul class="nav navbar-nav" style="padding-left: 20px;">
+              {{#if home}}
+              <li class="navbar-link"><a href="#services">Services</a></li>
+              <li class="navbar-link"><a href="#company">Company</a></li>
+              <li class="navbar-link"><a href="#quotes">Quotes</a></li>
+              {{/if}}
+              <li class="navbar-link"><a href="/frequently-asked-questions">FAQ</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              {{#if isAuthenticated}}
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/admin/articles">Browse</a></li>
+                    <li><a href="/admin/articles/create">Create</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Items
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/admin/items">Browse</a></li>
+                    <li><a href="/admin/items/create">Create</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Messages
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/admin/messages">New</a></li>
+                    <li><a href="/admin/messages/archive">Archive</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Requests
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/admin/requests">New</a></li>
+                    <li><a href="/admin/requests/archive">Archive</a></li>
+                  </ul>
+                </li>
+                <li><a class="btn btn-toolbar" href="/logout">Logout</a></li>
+              {{else}}
+                <li><a class="btn btn-toolbar" href="/login">Login</a></li>
+              {{/if}}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    {{#if globalError}}
+    <div class="container" style="padding: 20px;">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h4>{{globalError}}</h4>
+      </div>
+    </div>
+    {{/if}}
+    {{{body}}}
+  </div>
+</body>
+<footer class="footer modal-footer" style="box-shadow: 0px -1px 1px #000000">
+  <nav class="navbar navbar-default no-margins nav-font">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav" style="padding-left: 20px; margin-top: 5px;">
+          <li class="navbar-link">
+            <a class="btn btn-toolbar text-muted" href="/privacy">Privacy & Terms</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" style="padding-left: 25px;">
+          <li class="navbar-link">
+            <a class="btn btn-toolbar text-muted" href="https://web.facebook.com/HNSDigital/?fref=ts">
+              Powered by <img style="width: 35px;" src="/images/hnslogo.png">
+            </a>
+          </li>
+          <li class="navbar-link">
+              <div class="container" align="center">
+                <img src='http://www.smartbusinessdirectory.co.uk/c.php?id=40619' 
+                  style="position:absolute; visibility:hidden">
+                    <a href="http://www.smartbusinessdirectory.co.uk/Removals-companies.html">
+                      <img src="http://www.smartbusinessdirectory.co.uk/images/smart.jpg"
+                    alt="Removals-companies business directory" border="0"></a>
+                    <br>
+                    <small><a href="http://www.smartbusinessdirectory.co.uk/company/40619.html">
+                    Our Removals-companies company listing</a></small>
+              </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</footer>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-103448495-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>
