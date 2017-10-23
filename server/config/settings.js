@@ -17,7 +17,7 @@ module.exports = {
     db: process.env.DB_PATH,
     port: process.env.PORT,
     ADMIN_USERNAME: process.env.ADMIN_USERNAME,
-    ADMIN_PASSWORD: process.env.ADMIN_PASSWORD
+    ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
     SESSION_SECRET: process.env.SESSION_SECRET
   }
 }
