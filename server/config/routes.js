@@ -6,6 +6,7 @@ module.exports = (app) => {
   app.use((req, res, next) => {
     let isAdmin = auth.isAuthenticated & auth.isInRole('Admin')
     res.locals.isAdmin = isAdmin
+    next()
   })
   app.get('/', user.home.index)
 
